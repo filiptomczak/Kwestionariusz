@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Zadanie.Models.Survey>
+
+@{
+    ViewBag.Title = "Results";
+}
+
+
+<h2>Results</h2>
+
+    <table class="table table-bordered table-hover" id="results">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Name</th>
+                <th>Last Name</th>
+                <th>Pesel</th>
+                <th>Gender</th>
+                <th>Birth date</th>
+                <th>University</th>
+                <th>Faculty</th>
+                <th>Age</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var survey in Model)
+            {
+                <tr>
+                    <td>@survey.Email</td>
+                    <td>@survey.Name</td>
+                    <td>@survey.LastName</td>
+                    <td>@survey.Pesel</td>
+                    <td>@survey.Gender.Name</td>
+                    <td>@survey.BirthDate.ToShortDateString()</td>
+                    <td>@survey.GraduatedUni.Name</td>
+                    <td>@survey.Faculty.Name</td>
+                    <td>@survey.Age</td>
+                    <td>@survey.Grade</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+

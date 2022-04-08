@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Nowa ankieta</h2>
+        @Html.ActionLink("Wypelnij", "New","Home", new { @class = "btn btn-primary" })
+    </div>
+    <div class="col-md-6">
+        <h2>Zobacz wyniki</h2>
+        @Html.ActionLink("Podglad", "Results", "Home", new { @class = "btn btn-default" })
+        
+    </div>
+</div>
